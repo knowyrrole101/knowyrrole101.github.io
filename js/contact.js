@@ -8,15 +8,13 @@ form.onsubmit = function(event) {
     var message = document.getElementById("message").value;
 
     var payload = { "name": name, "email": email, "phone": phone, "message": message };
-    req.open('POST', 'http://httpbin.org/post', true);
+    req.open('POST', 'https://httpbin.org/post', true);
     req.setRequestHeader('Content-Type', 'application/json');
     // Async
     req.addEventListener('load', function() {
         if (req.status >= 200 && req.status < 400) {
             var response = JSON.parse(req.response);
             var response_data = JSON.parse(response.data);
-            console.log(response);
-            console.log(response_data);
             removeForm(form);
             addSuccessMessage(response_data);
         } else {
