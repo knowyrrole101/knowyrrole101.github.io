@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    background: #eeeeee;
+    padding-bottom: 3rem;
+}
+
+.container {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.below-header {
+    margin-top: 100px;
+}
+
+.footer-margin-override {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.carousel {
+    margin-bottom: 4rem;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+.footer {
+    background-color: #d3d3d3
+}
+
+.marketing {
+    padding: 50px;
+    padding-bottom: 50px;
+}
+
+.featurette {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.about-me-row {
+    margin-top: 25px;
+}
+
+.card {
+    display: inline-block;
+    font-size: 10px;
+}
+
+.jumbotron {
+    margin-top: -150px;
+    margin-bottom: -50px;
+}
