@@ -16,8 +16,8 @@ function startCounting() {
         timeSpentOnSite = getTimeSpentOnSite() + (Date.now() - timerStart);
         localStorage.setItem('timeSpentOnSite', timeSpentOnSite);
         timerStart = parseInt(Date.now());
-        session.textContent = parseInt(timeSpentOnSite / 1000);
-    }, 500);
+        session.textContent = parseInt(timeSpentOnSite / 2000);
+    }, 1000);
 }
 startCounting();
 
