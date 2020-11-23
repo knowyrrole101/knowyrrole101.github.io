@@ -9,14 +9,27 @@ function getTimeSpentOnSite() {
 }
 
 function startCounting() {
-    document.getElementById('')
+    localStorage.clear();
+    var session = document.getElementById('session-time');
     timerStart = Date.now();
     timer = setInterval(function() {
         timeSpentOnSite = getTimeSpentOnSite() + (Date.now() - timerStart);
         localStorage.setItem('timeSpentOnSite', timeSpentOnSite);
         timerStart = parseInt(Date.now());
-        // Convert to seconds
-        console.log(parseInt(timeSpentOnSite / 1000));
+        session.textContent = parseInt(timeSpentOnSite / 1000);
     }, 1000);
 }
 startCounting();
+
+// locationButton.addEventListener('click', () => {
+//     locationButton.setAttribute('disabled', 'disabled')
+//     if(navigator.geolocation){
+//       navigator.geolocation.getCurrentPosition((location) => {
+//         mylocation = { latitude: location.coords.latitude,
+//                        longitude: location.coords.longitude
+//                      }
+//         socket.emit('sendLocation', mylocation, ()=> {
+//           locationButton.removeAttribute('disabled')
+//           console.log('Location sent!')
+//         })
+//       })
